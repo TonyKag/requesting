@@ -5,7 +5,7 @@
  * Instructor: Jean-francois Nepton<br>
  * Created: Oct 10, 2015
  */
-package com.sqa.jmn.requesting;
+package com.sqa.ao.requesting;
 
 import java.util.Scanner;
 
