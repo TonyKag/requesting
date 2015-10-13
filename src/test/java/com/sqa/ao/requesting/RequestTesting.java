@@ -1,18 +1,14 @@
 /**
- *   File Name: RequestTesting.java<br>
- *
- *   Yutaka<br>
- *   Java Boot Camp Exercise<br>
- *   Instructor: Jean-francois Nepton<br>
- *   Created: Oct 10, 2015
- *   
+ * File Name: RequestTesting.java<br>
+ * LastName, FirstName<br>
+ * Java Boot Camp Exercise<br>
+ * Instructor: Jean-francois Nepton<br>
+ * Created: Oct 10, 2015
  */
-
-package com.sqa.ao.requesting;
+package com.sqa.jmn.requesting;
 
 import java.util.Arrays;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -21,17 +17,20 @@ import org.junit.Test;
  * //ADDD (description of core fields)
  * <p>
  * //ADDD (description of core methods)
- * 
- * @author Yutaka
+ *
+ * @author LastName, FirstName
  * @version 1.0.0
  * @since 1.0
- *
  */
 public class RequestTesting {
 
+	/**
+	 * Test to test requestBooleanValue() method and provide a response based on
+	 * returned value
+	 */
 	@Test
-	@Ignore
-	public void test() {
+	// @Ignore
+	public void booleanTest() {
 		boolean isHungry = RequestValues.requestBooleanValue("Are you hungry?");
 		if (isHungry) {
 			System.out.println("Lets go eat!");
@@ -40,39 +39,60 @@ public class RequestTesting {
 		}
 	}
 
+	/**
+	 * Test to test requestDoubleValue() method and provide a response based on
+	 * returned value
+	 */
 	@Test
 	// @Ignore
-	public void test2() {
-		int number = RequestValues.requestIntValue("please pick a number?");
+	public void doubleTest() {
+		double number = RequestValues.requestDoubleValue("Please pick a double number?" + " ");
 		System.out.println("You have supplied the number: " + number);
 	}
 
+	/**
+	 * Test to test requestFloatValue() method and provide a response based on
+	 * returned value
+	 */
 	@Test
 	// @Ignore
-	public void test3() {
-		double number = RequestValues.requestDoubleValue("please pick a double number?");
+	public void floatTest() {
+		float number = RequestValues.requestFloatValue("Please pick a float number?" + " ");
 		System.out.println("You have supplied the number: " + number);
 	}
 
+	/**
+	 * Test to test requestIntValue() method and provide a response based on
+	 * returned value
+	 */
 	@Test
 	// @Ignore
-	public void test4() {
-		float number = RequestValues.requestFloatValue("please pick a float number?");
+	public void intTest() {
+		int number = RequestValues.requestIntValue("Please pick a number?" + " ");
 		System.out.println("You have supplied the number: " + number);
 	}
 
+	/**
+	 * Test to test overloaded requestStringValue() method and provide a
+	 * response based on returned value, default "," as delimiter (when using
+	 * "," as delimiter the replace operation will replace white spaces in
+	 * between words with hyphens)
+	 */
 	@Test
 	// @Ignore
-	public void test5() {
-		String words = RequestValues.requestStringValues("please provide a list of sorts?");
-		System.out.println("You have supplied a word: " + Arrays.deepToString(words);
+	public void stringsOverloadedTest() {
+		String[] words = RequestValues.requestStringValues("Please proivide a list of sports?");
+		System.out.println("You have supplied the words: " + Arrays.deepToString(words));
 	}
 
+	/**
+	 * Test to test requestStringValuse() method and provide a response based on
+	 * returned value
+	 */
 	@Test
 	// @Ignore
-	public void test6() {
-		String words = RequestValues.requestStringValues("please provide a list of sorts?");
-		System.out.println("You have supplied a word: " + Arrays.deepToString(words);
+	public void stringsText() {
+		String[] words = RequestValues.requestStringValues("Please proivide a list of sports?", " ");
+		System.out.println("You have supplied the words: " + Arrays.deepToString(words));
 	}
-
 }
