@@ -11,10 +11,6 @@ import java.util.Scanner;
 
 /**
  * RequestValues //ADDD (description of class)
- * <p>
- * //ADDD (description of core fields)
- * <p>
- * //ADDD (description of core methods)
  *
  * @author LastName, FirstName
  * @version 1.0.0
@@ -54,7 +50,7 @@ public class RequestValues {
 
 	/**
 	 * Static helper method that requests an double value from user, number must
-	 * convert to douuble properly to be valid or else will repeat
+	 * convert to double properly to be valid or else will repeat
 	 *
 	 * @param question
 	 *            To be asked to base double result from
